@@ -1,0 +1,11 @@
+{
+  "name": "consultaencomendas",
+  "version": "1.0.0",
+  "main": "index.html",
+  "license": "MIT",
+  
+  "dependencies": {
+    "sass": "^1.38.2"
+  },
+  "devDependencies": {}
+}

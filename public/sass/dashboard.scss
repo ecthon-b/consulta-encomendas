@@ -1,0 +1,29 @@
+.dashboard {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard-content {
+    width: 600px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    width: 300px;
+    height: 150px;
+    background: chartreuse;
+    text-align: center;
+
+    small {
+        font-style: italic;
+    }
+}
+        
