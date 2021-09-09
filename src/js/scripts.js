@@ -16,14 +16,18 @@ form.addEventListener('submit', function(e) {
     }
 })
 
-function setResult(encomendas) {
-    document.getElementById("numero-ordem").innerHTML = encomendas.id;
-    document.getElementById("nome-cliente").innerHTML = encomendas.cliente.nome;
-    document.getElementById("valor").innerHTML = (encomendas.valor).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
-    const dataEntrega = encomendas.data
-    document.getElementById("data-pedido").innerHTML = dataEntrega;
+function setResult(encomenda) {
+    document.getElementById("numero-ordem").innerHTML = encomenda.id;
+    document.getElementById("nome-cliente").innerHTML = encomenda.cliente.nome;
+    document.getElementById("valor").innerHTML = (encomenda.valor).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
 
-    const statusEncomenda = (encomendas.entregue === true ? "Entregue" : "Entregar"); 
+    const dataEntrega = new Date(encomenda.data)
+    console.log(encomenda.data)
+    const dataFormatada = dataEntrega.toLocaleDateString()
+    console.log(dataFormatada)
+    document.getElementById("data-pedido").innerHTML = dataFormatada;
+    
+    const statusEncomenda = (encomenda.entregue === true ? "Entregue" : "Entregar"); 
     document.getElementById("status-entrega").innerHTML = statusEncomenda;
 }
 

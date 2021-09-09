@@ -17,13 +17,20 @@
 }
 
 .card {
+    margin: 0.75rem;
+    padding: 1rem;
     width: 300px;
     height: 150px;
-    background: chartreuse;
+    background: #f2f3f4;
     text-align: center;
+
+    p{
+        font-weight: bold;
+    }
 
     small {
         font-style: italic;
+        color: var(--text-placeholder);
     }
 }
         
